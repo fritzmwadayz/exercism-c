@@ -1,0 +1,11 @@
+def triplets_with_sum(number):
+    triplets = []
+    for a in range(1, number):
+        for b in range(a + 1, number):
+            c = number - a - b
+            if b >= c:
+                break
+            if a*a + b*b == c*c:
+                triplets.append([a, b, c])
+
+    return triplets
